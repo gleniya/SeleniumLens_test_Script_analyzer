@@ -1,40 +1,161 @@
-# SeleniumLens_test_Script_analyzer
-A tool for QA engineers to analyze Selenium test scripts for issues in locators, timing, naming, structure, and best practices.
+# SeleniumLens
 
-## Features
+AI-Powered Selenium Test Quality Analyzer
 
-- 🎯 **Fragile locator detection** — Identifies brittle XPaths and suggests stable alternatives
-- ⏱ **Timing issues** — Flags Thread.sleep and missing explicit waits
-- ✏️ **Naming violations** — Catches poor method/variable names
-- 🏗 **Structural analysis** — Recommends Page Object Model patterns
-- ✓ **Assertion gaps** — Detects missing or weak assertions  
-- ⭐ **Best practices** — General Selenium anti-pattern detection
-- 📊 **Quality score** — A–F grading with 0–100 score
-- ✏️ **Suggestions** - suggestion improvements
-- ✏️ **Refactored code**- Code refactoring
+---
 
-## Setup
+## Overview
 
-### 1. Install dependencies
-```bash
-npm install
-```
+SeleniumLens is a hybrid Selenium test quality analysis platform designed to evaluate the quality, maintainability, stability, and reliability of Selenium automation scripts.
 
-### 2. Set up your OpenAI API key
+The system combines:
 
-Create a `.env.local` file:
-```
-create a API key from OpenAI API and place it this file
-```
+- Static Analysis
+- AI-Based Analysis
+- Quality Metric Evaluation
+- Refactoring Suggestions
 
+to provide intelligent insights into Selenium test automation quality.
 
-### 3. Run locally
-```bash
-npm run dev
-```
+---
 
-## Tech Stack
-- React 18 + Vite
-- ChatGPT API
-- Pure CSS (no UI library)
-- Vercel for deployment
+# Key Features
+
+## Static Analysis
+
+Detects common Selenium anti-patterns such as:
+
+- `Thread.sleep()`
+- Absolute XPath locators
+- Basic synchronization risks
+
+---
+
+## AI-Powered Analysis
+
+Uses OpenAI API to perform intelligent analysis of Selenium test scripts.
+
+The AI module can:
+
+- Detect advanced issues
+- Classify issue severity
+- Generate recommendations
+- Suggest refactoring improvements
+
+---
+
+## Quality Metrics Engine
+
+Computes multiple quality indicators including:
+
+- Maintainability
+- Stability Score
+- Flakiness Risk
+- Technical Debt
+- Complexity
+
+---
+
+## SLQI (SeleniumLens Quality Index)
+
+Generates an overall quality score using weighted metric evaluation.
+
+---
+
+## Refactoring Suggestions
+
+Automatically generates improved Selenium code suggestions including:
+
+- Explicit waits
+- Improved locator strategies
+- Better test practices
+
+---
+
+## Interactive Dashboard
+
+Displays:
+
+- Quality score
+- Grade
+- Issues detected
+- Metrics
+- Refactored code
+- Suggestions
+
+through a clean user interface.
+
+---
+
+# Technologies Used
+
+## Frontend
+
+- React
+- Vite
+- CSS
+
+---
+
+## Backend
+
+- Node.js
+- Vercel Serverless Functions
+
+---
+
+## AI
+
+- OpenAI API
+- GPT-4.1 Nano
+
+---
+
+## Software Engineering Concepts
+
+- Static Analysis
+- Hybrid Analysis
+- Quality Metric Modeling
+- Rule-Based Detection
+- AI-Assisted Code Analysis
+
+---
+
+# System Workflow
+
+1. User uploads Selenium test script
+2. Static analysis is performed
+3. Quality metrics are calculated
+4. Script is sent to OpenAI API
+5. AI analysis is generated
+6. Results are aggregated
+7. SLQI score is computed
+8. Dashboard displays final results
+
+---
+
+# Detected Issue Categories
+
+SeleniumLens detects issues related to:
+
+- Timing Problems
+- Locator Issues
+- Maintainability Problems
+- Stability Risks
+- Complexity Concerns
+- Selenium Best-Practice Violations
+
+---
+
+# Project Architecture
+
+```text
+Selenium Script
+       ↓
+Static Analysis + AI Analysis + Metrics
+       ↓
+Result Aggregation
+       ↓
+SLQI Calculation
+       ↓
+Interactive Dashboard

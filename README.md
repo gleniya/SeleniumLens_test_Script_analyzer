@@ -164,9 +164,7 @@ Interactive Dashboard
 
 ## Clone Repository
 
-```bash
-git clone https://github.com/yourusername/seleniumlens.git
-```
+
 
 ## Navigate to Project Folder
 

@@ -33,44 +33,6 @@ create a API key from OpenAI API and place it this file
 npm run dev
 ```
 
-## Deploy to Vercel
-
-### Option A: Via Vercel CLI
-```bash
-npm install -g vercel
-vercel
-```
-
-### Option B: Via Vercel Dashboard
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → New Project → Import repo
-3. Add environment variable: `API_KEY`
-4. Deploy
-
-### Production API key handling (recommended)
-For production, use a Vercel serverless function instead of calling the Anthropic API directly from the browser. Create `api/analyze.js`:
-
-```js
-export default async function handler(req, res) {
-  if (req.method !== 'POST') return res.status(405).end()
-  
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': process.env.AI_API_KEY,
-      'anthropic-version': '2023-06-01',
-    },
-    body: JSON.stringify(req.body)
-  })
-  
-  const data = await response.json()
-  res.json(data)
-}
-```
-
-Then change the fetch URL in `App.jsx` from `https://api.anthropic.com/v1/messages` to `/api/analyze`.
-
 ## Tech Stack
 - React 18 + Vite
 - ChatGPT API

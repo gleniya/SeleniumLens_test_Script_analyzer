@@ -159,3 +159,37 @@ Result Aggregation
 SLQI Calculation
        ↓
 Interactive Dashboard
+---
+# Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/seleniumlens.git
+```
+
+## Navigate to Project Folder
+
+```bash
+cd seleniumlens
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+## Create Environment File
+
+Create a `.env` file in the root directory and add:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+## Run Development Server
+
+```bash
+npm run dev
+```

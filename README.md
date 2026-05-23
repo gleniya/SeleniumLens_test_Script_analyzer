@@ -24,6 +24,7 @@ npm install
 
 Create a `.env.local` file:
 ```
+create a API key from OpenAI API and place it this file
 ```
 
 
